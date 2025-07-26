@@ -1,32 +1,31 @@
 import axios from 'axios';
 import {useEffect, useState} from 'react';
+import {Link} from 'react-router';
+
+export type ProductType = {
+    _id: string
+    id: number
+    title: string
+    price: number
+    description: string
+    category: string
+    image: string
+    rating: {
+        rate: number
+        count: number
+    }
+    createdAt: string
+    updatedAt: string
+    __v: number
+}
 
 export const BestSellers = () => {
 
-    interface ProductType {
-        _id: string
-        id: number
-        title: string
-        price: number
-        description: string
-        category: string
-        image: string
-        rating: {
-            rate: number
-            count: number
-        }
-        createdAt: string
-        updatedAt: string
-        __v: number
-    }
-
-    const [products, setProducts] = useState<ProductType[]>([]);
+        const [products, setProducts] = useState<ProductType[]>([]);
 
     useEffect(() => {
         axios.get("https://masterclass.kimitsu.it-incubator.io/api/products")
-        .then((result) => {
-            setProducts(result.data);
-        })
+        .then((result) => setProducts(result.data));
     }, []);
 
     return (
@@ -40,7 +39,7 @@ export const BestSellers = () => {
                                 <img src={element.image} alt="img"/>
                                 <h4>{element.title}</h4>
                                 <p className="price">$ {element.price}</p>
-                                <button>Show more</button>
+                                <Link to={`/product/${element.id}`}>Show more</Link>
                             </div>
                         );
                     })
