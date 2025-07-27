@@ -82,20 +82,20 @@
   margin-bottom: 30px;
 }
 
-.card button {
-  background-color: white;
-  border: 1px solid #2068F8;
-  border-radius: 2px;
-  padding: 10px 0;
-  width: 80%;
-  color: #2068F8;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  align-self: center;
-  margin-bottom: 36px;
-  cursor: pointer;
-}
+/*.card button {*/
+/*  background-color: white;*/
+/*  border: 1px solid #2068F8;*/
+/*  border-radius: 2px;*/
+/*  padding: 10px 0;*/
+/*  width: 80%;*/
+/*  color: #2068F8;*/
+/*  font-size: 16px;*/
+/*  font-weight: 500;*/
+/*  line-height: 24px;*/
+/*  align-self: center;*/
+/*  margin-bottom: 36px;*/
+/*  cursor: pointer;*/
+/*}*/
 
 
 /* Страница продукта / товара */
@@ -141,7 +141,6 @@
   font-size: 24px;
   font-weight: 500;
   line-height: 30px;
-  font-weight: 500px;
   margin: 0 0 7px 0;
 }
 
@@ -215,7 +214,6 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  justify-content: flex-end;
   display: flex;
   justify-content: center;
 }
@@ -224,6 +222,20 @@
   width: 18px;
   height: 18px;
   margin-right: 10px;
+}
+
+.product .info button.active  {
+  background: #ffffff;
+  border-radius: 4px;
+  width: 100%;
+  padding: 14px;
+  color: #2068f8;
+  border: 2px solid #2068f8 ;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 /* Отзывы */
@@ -241,7 +253,6 @@
   font-size: 24px;
   font-weight: 500;
   line-height: 30px;
-  font-weight: 500px;
   margin: 0 0 30px 0;
 }
 
